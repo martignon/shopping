@@ -1,0 +1,16 @@
+<div class="modal-header text-center">
+    <h4 class="modal-title big-text">Add item</h4>
+</div>
+<form role="form">
+    <div class="modal-body text-center">
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <input type="text" class="form-control big-text input-text-high" id="itemName" ng-model="item.name" required />
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="reset" class="btn btn-danger big-text" ng-click="cancel()">Cancel</button>
+        <button type="submit" class="btn btn-primary big-text" ng-click="save()">Save</button>
+    </div>
+</form>

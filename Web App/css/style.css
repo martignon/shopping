@@ -1,0 +1,35 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #444444;
+}
+.color-white {
+    color: white;
+}
+.vertical-spacing {
+    margin-bottom: 20px;
+}
+.vertical-centered {
+    vertical-align: middle;
+}
+.big-text {
+    font-size: 5em;
+}
+.middle-text {
+    font-size: 3em;
+}
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* Internet Explorer */
+  -moz-transform: scale(2); /* Firefox */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  padding: 10px;
+}
+.input-text-high {
+    height: 2em;
+}
+.close-mouse-over:hover {
+    color: #444;
+}
