@@ -6,7 +6,7 @@
         $load = $data["load"];
     }
 
-    $file = "/var/lib/cgi-data/shopping.txt";
+    $file = "/var/lib/shopping-app/shopping.txt";
 
     if ($load == "up" && isset($data["shopping"])) {
         $file = fopen($file, "w");
@@ -14,7 +14,7 @@
         fclose($file);
     }
     else if ($load=="down" ) {
-        $handler = fopen("/var/lib/cgi-data/shopping.txt", "r");
+        $handler = fopen("/var/lib/shopping-app/shopping.txt", "r");
         $content = fgets($handler, filesize($file) + 1);
         fclose($handler);
         print($content);
