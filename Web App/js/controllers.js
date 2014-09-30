@@ -1,5 +1,23 @@
 function MainCtrl($scope, $rootScope, $modal, itemsFactory) {
     $rootScope.items = [];
+    $scope.alerts = {
+        'loadItemsError': false,
+        'saveItemsError': false,
+        'loadItemsSuccess': false,
+        'saveItemsSuccess': false
+    };
+
+    itemsFactory.getItems().then(function () {
+        // Resolve: show success alert
+        $scope.alerts.loadItemsSuccess = true;
+    }, function () {
+        // Reject: show error alert
+        $scope.alerts.loadItemsError = true;
+    });
+
+    $scope.closeAlert = function (alert) {
+        $scope.alerts[alert] = false;
+    };
 
     $scope.addItem = function () {
         // Open a modal to add an item
@@ -10,7 +28,13 @@ function MainCtrl($scope, $rootScope, $modal, itemsFactory) {
     };
 
     $scope.refresh = function () {
-
+        itemsFactory.getItems().then(function () {
+            // Resolve: show success alert
+            $scope.alerts.loadItemsSuccess = true;
+        }, function () {
+            // Reject: show error alert
+            $scope.alerts.loadItemsError = true;
+        });
     };
 
     $scope.removeChecked = function () {
@@ -28,7 +52,13 @@ function MainCtrl($scope, $rootScope, $modal, itemsFactory) {
     };
 
     $scope.save = function () {
-
+        itemsFactory.saveItems().then(function () {
+            // Resolve: show success alert
+            $scope.alerts.saveItemsSuccess = true;
+        }, function () {
+            // Reject: show error alert
+            $scope.alerts.saveItemsError = true;
+        });
     };
 }
 

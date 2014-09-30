@@ -25,6 +25,38 @@
 
 <body ng-controller="MainCtrl">
     <div class="container">
+        <div class="row" ng-if="alerts.loadItemsError">
+            <div class="col-md-8 col-md-offset-2 col-xs-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-11 col-xs-10 middle-text">
+                                Cannot load items! Check Internet connection!
+                            </div>
+                            <div class="col-md-1 col-xs-2 text-right">
+                                <span ng-click="closeAlert('loadItemsError')" class="middle-text close-mouse-over glyphicon glyphicon-remove-circle"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-if="alerts.saveItemsError">
+            <div class="col-md-8 col-md-offset-2 col-xs-12">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-11 col-xs-10 middle-text">
+                                Cannot save items! Check Internet connection!
+                            </div>
+                            <div class="col-md-1 col-xs-2 text-right">
+                                <span ng-click="closeAlert('saveItemsError')" class="middle-text close-mouse-over glyphicon glyphicon-remove-circle"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row vertical-spacing">
             <div class="col-md-6 col-md-offset-2 col-xs-9 vertical-spacing">
                 <button class="btn btn-success btn-lg btn-block big-text" ng-click="addItem()">Add item</button>
@@ -52,6 +84,38 @@
         <div class="row vertical-spacing">
             <div class="col-md-8 col-md-offset-2 col-xs-12">
                 <button class="btn btn-warning btn-lg btn-block big-text" ng-click="save()">Save</button>
+            </div>
+        </div>
+        <div class="row" ng-if="alerts.loadItemsSuccess">
+            <div class="col-md-8 col-md-offset-2 col-xs-12">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-11 col-xs-10 middle-text">
+                                Items successfully loaded!
+                            </div>
+                            <div class="col-md-1 col-xs-2 text-right">
+                                <span ng-click="closeAlert('loadItemsSuccess')" class="middle-text close-mouse-over glyphicon glyphicon-remove-circle"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-if="alerts.saveItemsSuccess">
+            <div class="col-md-8 col-md-offset-2 col-xs-12">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-11 col-xs-10 middle-text">
+                                Items successfully saved!
+                            </div>
+                            <div class="col-md-1 col-xs-2 text-right">
+                                <span ng-click="closeAlert('saveItemsSuccess')" class="middle-text close-mouse-over glyphicon glyphicon-remove-circle"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
