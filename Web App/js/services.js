@@ -1,3 +1,8 @@
+/*
+    Copyright (C) 2014 Mirko Martignon
+    GNU GPLv3
+*/
+
 app.factory('itemsFactory', function ($rootScope, $http, $q) {
     var getItems = function () {
         var deferred = $q.defer();

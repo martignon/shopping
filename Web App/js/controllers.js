@@ -1,3 +1,8 @@
+/*
+    Copyright (C) 2014 Mirko Martignon
+    GNU GPLv3
+*/
+
 function MainCtrl($scope, $rootScope, $modal, itemsFactory) {
     $rootScope.items = [];
     $scope.alerts = {
