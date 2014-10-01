@@ -6,14 +6,14 @@
 <head>
     <meta lang="en">
     <meta charset="utf-8">
-    
+
     <!-- Optimized for iPhone 5 home screen installation -->
     <meta name="viewport" content="user-scalable = no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="apple-touch-startup-image" href="/apple-touch-startup-image.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" />
-    
+
     <title>Shopping</title>
 
     <!-- Cascading Style Sheets (CSS) -->
@@ -81,10 +81,10 @@
             <div class="col-md-8 col-md-offset-2 col-xs-12">
                 <table class="table">
                     <tr ng-repeat="item in items" class="big-text">
-                        <td>
+                        <td class="vert-align">
                             <input type="checkbox" ng-model="item.checked" class="vertical-centered" />
                         </td>
-                        <td class="color-white" ng-click="item.checked = !item.checked">{{item.name}}</td>
+                        <td class="color-white left-padded" ng-click="item.checked = !item.checked">{{item.name}}</td>
                     </tr>
                 </table>
             </div>

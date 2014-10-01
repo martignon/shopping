@@ -9,9 +9,11 @@ function MainCtrl($scope, $rootScope, $modal, itemsFactory) {
 
     itemsFactory.getItems().then(function () {
         // Resolve: show success alert
+        $scope.alerts.saveItemsSuccess = false;
         $scope.alerts.loadItemsSuccess = true;
     }, function () {
         // Reject: show error alert
+        $scope.alerts.saveItemsError = false;
         $scope.alerts.loadItemsError = true;
     });
 
@@ -30,9 +32,11 @@ function MainCtrl($scope, $rootScope, $modal, itemsFactory) {
     $scope.refresh = function () {
         itemsFactory.getItems().then(function () {
             // Resolve: show success alert
+            $scope.alerts.saveItemsSuccess = false;
             $scope.alerts.loadItemsSuccess = true;
         }, function () {
             // Reject: show error alert
+            $scope.alerts.saveItemsError = false;
             $scope.alerts.loadItemsError = true;
         });
     };
@@ -54,9 +58,11 @@ function MainCtrl($scope, $rootScope, $modal, itemsFactory) {
     $scope.save = function () {
         itemsFactory.saveItems().then(function () {
             // Resolve: show success alert
+            $scope.alerts.loadItemsSuccess = false;
             $scope.alerts.saveItemsSuccess = true;
         }, function () {
             // Reject: show error alert
+            $scope.alerts.loadItemsError = false;
             $scope.alerts.saveItemsError = true;
         });
     };

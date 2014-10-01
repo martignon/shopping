@@ -9,8 +9,11 @@ body {
 .vertical-spacing {
     margin-bottom: 20px;
 }
-.vertical-centered {
+table tr>td.vert-align {
     vertical-align: middle;
+}
+table tr>td.left-padded {
+    padding-left: 40px;
 }
 .big-text {
     font-size: 5em;
@@ -18,14 +21,17 @@ body {
 .middle-text {
     font-size: 3em;
 }
-input[type=checkbox]
-{
-  /* Double-sized Checkboxes */
-  -ms-transform: scale(2); /* Internet Explorer */
-  -moz-transform: scale(2); /* Firefox */
-  -webkit-transform: scale(2); /* Safari and Chrome */
-  -o-transform: scale(2); /* Opera */
-  padding: 10px;
+input[type=checkbox] {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(2);
+    /* Internet Explorer */
+    -moz-transform: scale(2);
+    /* Firefox */
+    -webkit-transform: scale(2);
+    /* Safari and Chrome */
+    -o-transform: scale(2);
+    /* Opera */
+    padding: 10px;
 }
 .input-text-high {
     height: 2em;
