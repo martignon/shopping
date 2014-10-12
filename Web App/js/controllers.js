@@ -1,6 +1,6 @@
 /*
     Copyright (C) 2014 Mirko Martignon
-    GNU GPLv3
+    License: GNU GPLv3
 */
 
 function MainCtrl($scope, $rootScope, $modal, itemsFactory) {
@@ -35,6 +35,12 @@ function MainCtrl($scope, $rootScope, $modal, itemsFactory) {
     };
 
     $scope.refresh = function () {
+        // First, close all the alert messages
+        $scope.alerts['loadItemsError'] = false;
+        $scope.alerts['saveItemsError'] = false;
+        $scope.alerts['loadItemsSuccess'] = false;
+        $scope.alerts['saveItemsSuccess'] = false;
+
         itemsFactory.getItems().then(function () {
             // Resolve: show success alert
             $scope.alerts.saveItemsSuccess = false;
@@ -61,6 +67,12 @@ function MainCtrl($scope, $rootScope, $modal, itemsFactory) {
     };
 
     $scope.save = function () {
+        // First, close all the alert messages
+        $scope.alerts['loadItemsError'] = false;
+        $scope.alerts['saveItemsError'] = false;
+        $scope.alerts['loadItemsSuccess'] = false;
+        $scope.alerts['saveItemsSuccess'] = false;
+        
         itemsFactory.saveItems().then(function () {
             // Resolve: show success alert
             $scope.alerts.loadItemsSuccess = false;

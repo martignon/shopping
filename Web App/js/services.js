@@ -1,6 +1,6 @@
 /*
     Copyright (C) 2014 Mirko Martignon
-    GNU GPLv3
+    License: GNU GPLv3
 */
 
 app.factory('itemsFactory', function ($rootScope, $http, $q) {
@@ -20,12 +20,14 @@ app.factory('itemsFactory', function ($rootScope, $http, $q) {
 
             $rootScope.items = [];
 
-            angular.forEach(temp, function (itemName) {
-                $rootScope.items.push({
-                    'checked': false,
-                    'name': itemName
+            if (data != "") {
+                angular.forEach(temp, function (itemName) {
+                    $rootScope.items.push({
+                        'checked': false,
+                        'name': itemName
+                    });
                 });
-            });
+            }
 
             deferred.resolve();
         }).error(function () {

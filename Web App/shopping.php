@@ -1,4 +1,9 @@
 <?php
+    /*
+        Copyright (C) 2014 Mirko Martignon
+        License: GNU GPLv3
+    */
+
     $data = file_get_contents("php://input");
     $data = json_decode($data, TRUE);
     
