@@ -12,35 +12,49 @@ body {
     color: white;
 }
 .vertical-spacing {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 table tr>td.vert-align {
     vertical-align: middle;
 }
-table tr>td.left-padded {
-    padding-left: 40px;
-}
 .big-text {
-    font-size: 5em;
+    font-size: 22px;;
 }
 .middle-text {
-    font-size: 3em;
-}
-input[type=checkbox] {
-    /* Double-sized Checkboxes */
-    -ms-transform: scale(2);
-    /* Internet Explorer */
-    -moz-transform: scale(2);
-    /* Firefox */
-    -webkit-transform: scale(2);
-    /* Safari and Chrome */
-    -o-transform: scale(2);
-    /* Opera */
-    padding: 10px;
+    font-size: 14px;
 }
 .input-text-high {
     height: 2em;
 }
 .close-mouse-over:hover {
     color: #444;
+}
+.checkboxHolder {
+    width: 35px;
+}
+.table {
+    margin-bottom: 0px;
+}
+/* For medium screens */
+@media (min-width: 992px) {
+    .big-text {
+        font-size: 44px;
+    }
+    .middle-text {
+        font-size: 32px;
+    }
+    .checkboxHolder {
+        width: 60px;
+    }
+    input[type=checkbox] {
+        /* Double-sized Checkboxes */
+        -ms-transform: scale(2);
+        /* Internet Explorer */
+        -moz-transform: scale(2);
+        /* Firefox */
+        -webkit-transform: scale(2);
+        /* Safari and Chrome */
+        -o-transform: scale(2);
+        /* Opera */
+    }
 }

@@ -11,7 +11,7 @@
     <meta charset="utf-8">
 
     <!-- Optimized for iPhone 5 home screen installation -->
-    <meta name="viewport" content="user-scalable = no">
+    <meta name="viewport" content="width = device-width, inital-scale = 1, user-scalable = no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -84,7 +84,7 @@
             <div class="col-md-8 col-md-offset-2 col-xs-12">
                 <table class="table">
                     <tr ng-repeat="item in items" class="big-text">
-                        <td class="vert-align">
+                        <td class="vert-align checkboxHolder">
                             <input type="checkbox" ng-model="item.checked" class="vertical-centered" />
                         </td>
                         <td class="color-white left-padded" ng-click="item.checked = !item.checked">{{item.name}}</td>
